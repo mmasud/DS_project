@@ -7,10 +7,6 @@ This repo holds one of my Data Science Challenge Case work.
 * Install [poetry](https://github.com/python-poetry/poetry)
 * Run `poetry install`
 
-## Credentials
-
-Credentials for BigQuery are expected to be present at
-`/data/secrets/gcp-cross-sales/auth`. If you get a encryped file, run `gpg -d ~/Desktop/the_encryped_file.txt`, follow instructions and save in `/data/secrets/gcp-cross-sales/auth`.
 
 ## Run locally
 
