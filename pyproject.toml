@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "SEB_project"
+version = "0.1.0"
+description = ""
+authors = ["mmasud <masud.pervez@yahoo.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pandas = "^1.2.3"
+scikit-learn = "^0.24.1"
+matplotlib = "^3.4.1"
+seaborn = "^0.11.1"
+numpy = "^1.20.2"
+jupyter = "^1.0.0"
+ipykernel = "^5.5.3"
+xgboost = "^1.3.3"
+joblib = "^1.0.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

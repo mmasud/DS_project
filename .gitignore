@@ -1,0 +1,10 @@
+scripts/__pycache__
+.idea
+.ipynb_checkpoints
+*tmp/*
+seb_project/data/*
+.vscode
+.pytest_cache
+*_tmp.yaml
+venv
+
