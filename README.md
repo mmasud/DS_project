@@ -18,7 +18,8 @@ This repo holds one of my Data Science Challenge Case work.
 * `SEB_project/seb_project/results/presentation.ppt`
 
 # Docker Image
+### Pull the docker image from dockerhub
+* `docker pull masud27/ds-env`
 
-## Environment Image can be load from dockerhub alternatively 
-
-* Command: `docker pull`
+### To run jupyter notebook
+* `docker container run -p 8888:8888 ds-env`
