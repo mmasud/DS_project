@@ -38,7 +38,7 @@ logger = logging.getLogger() # Create a logger obj using getLogger()
 ########################################################
 # path to data
 
-PATH= "C:\\Users\\masud.pervez\\Documents\\SEB_project\\seb_project\\data"
+PATH= "C:\\Users\\masud.pervez\\Documents\\SEB_project\\seb_project"
 
 ########################################################
 
@@ -51,9 +51,9 @@ def calculateAge(dob):
 
 # Load data
 logger.info("Loading datasets.........")
-customer_df = pd.read_csv(f'{PATH}//Customer.csv', sep=',')
-district_df = pd.read_csv(f'{PATH}//District.csv', sep=',')
-transaction_df = pd.read_csv(f'{PATH}//Transaction.csv', sep=',')
+customer_df = pd.read_csv(f'{PATH}/data/Customer.csv', sep=',')
+district_df = pd.read_csv(f'{PATH}/data/District.csv', sep=',')
+transaction_df = pd.read_csv(f'{PATH}/data/Transaction.csv', sep=',')
 print(customer_df.head())
 
 ########################################################
@@ -144,6 +144,8 @@ pipeline = Pipeline([
       ('rf', RandomForestClassifier(n_estimators=200))
     ])
 
+logger.info("Fitting pipeline on traain dataset.........")
+
 pipeline.fit(x_train, y_train)
 
 # make prediction
@@ -186,9 +188,10 @@ print("Model performance on train data\n", classification_report(y, pred_train))
 print("Model performance on test data\n", classification_report(y_test, pred_test))
 
 # Export the classifier to a file
-joblib.dump(pipeline, 'model_rf.joblib')
+logger.info("Saving the model.........")
+joblib.dump(pipeline, f'{PATH}/models/model_rf.joblib')
 
-print("Finish successfully!........")
+print("\nJob finish successfully!........\n")
 
 
 
